@@ -1,0 +1,19 @@
+{
+  "name": "com.redowl.telegraph",
+  "version": "0.1.0",
+  "displayName": "RedOwl - Telegraph",
+  "description": "An event/message system for Unity",
+  "unity": "2020.3",
+  "keywords": [
+    "event",
+    "message"
+  ],
+  "author": {
+    "name": "Red Owl Games",
+    "email": "support@redowlgames.com",
+    "url": "https://redowlgames.com"
+  },
+  "dependencies": {
+    "com.unity.addressables": ""
+  }
+}

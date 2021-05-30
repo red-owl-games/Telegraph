@@ -1,0 +1,16 @@
+{
+    "name": "RedOwl.Editor.Telegraph",
+    "references": [
+        "RedOwl.Engine.Telegraph"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}
