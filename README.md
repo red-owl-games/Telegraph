@@ -14,7 +14,7 @@ public class FloatChannel : ChannelBase<FloatMessage, float> {}
 
 Define your events in code
 
-```cshapr
+```csharp
 [Telegraph]
 public static class Events
 {
@@ -34,7 +34,7 @@ public static class PlayerEvents
 
 Register your methods to them
 
-```cshapr
+```csharp
 Events.StartGame.On += () => { Debug.Log("Game Started") }
 ```
 
