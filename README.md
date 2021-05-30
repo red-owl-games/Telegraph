@@ -51,6 +51,40 @@ And then you can use normal methods to work with scriptable objects and call the
 
 Lastly you can use `MessageListener` component to easily create a listener that will trigger the attached UnityEvent.
 
+You can event make your own listener's
+
+```csharp
+public class SceneMessage : MessageBase<SceneMetadata> {}
+    
+[CreateAssetMenu(menuName = Telegraph.MENU_PATH + "Scene", fileName = "Scene Channel")]
+public class SceneChannel : ChannelBase<SceneMessage, SceneMetadata> {}
+
+public class SceneChannelListener : MonoBehaviour
+{
+    [Serializable]
+    public class SceneUnityEvent : UnityEvent<SceneMetadata> {}
+    
+    public SceneChannel channel;
+
+    public SceneUnityEvent On;
+
+    private void OnEnable()
+    {
+        channel.On += Handler;
+    }
+
+    private void OnDisable()
+    {
+        channel.On -= Handler;
+    }
+
+    private void Handler(SceneMetadata metadata)
+    {
+        On?.Invoke(metadata);
+    }
+}
+```
+
 Everything is strongly typed!
 
 Cheers
